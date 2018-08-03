@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Add Music</h1>
+  <form (ngSubmit)="onSubmit(); songForm.reset()" #songForm="ngForm">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="model.title" name="title">
+      <span>{{model.title}}</span>
+
+    </div>
+
+    <div class="form-group">
+      <label for="artist">Artist</label>
+      <input type="text" class="form-control" id="artist" [(ngModel)]="model.artist" name="artist">
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <input type="text" class="form-control" id="genre" [(ngModel)]="model.genre" name="genre">
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Duration</label>
+      <input type="text" class="form-control" id="duration" [(ngModel)]="model.durationInSeconds" name="durationInSeconds">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input type="text" class="form-control" id="rating" [(ngModel)]="model.rating" name="rating">
+    </div>
+    <div class="form-group">
+      <label for="fav">Favorited</label>
+      <input type="text" class="form-control" id="fav" [(ngModel)]="model.favorited" name="favorited">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
